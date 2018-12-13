@@ -23,10 +23,10 @@
 			</div>
 			
 			<p>
-				<b>STEP 1:</b> Fill out the form below.
+				<b>PASO 1:</b> Complete el formulario 
 			</p>
 			<p>
-				<b>STEP 2:</b> Record short video response{{ '' if len(global_data["VIDEOS"]) == 1 else 's' }} on the following page{{ '' if len(global_data["VIDEOS"]) == 1 else 's' }}:
+				<b>PASO 2:</b> Grabe una corta respuesta en video en las siguientes pagina{{ '' if len(global_data["VIDEOS"]) == 1 else 's' }}:
 			</p>
 			<ul>
 				{% for video in global_data["VIDEOS"] %}
@@ -34,14 +34,14 @@
 					</li>
 				{% end %}
 			</ul>
-			<p><i>Hint: The browser will prompt you to record using your computer's camera and microphone. Please make sure you're all set in a quiet space.</i> </p>			
+			<p><i>Hint: Su navegador chequeara su camara y microfono. Asegurese de estar en un lugar iluminada y silencioso.</i> </p>			
 			
 			<p>
-				<b>STEP 3:</b> Submit.
+				<b>PASO 3:</b> Mandar sus videos.
 			</p>
 
 			<p>
-				<i>Note: once you submit each section, you will be unable to return and edit your response in that section.</i>
+				<i>Nota: Una vez que de completar a cada seccion no podra editar sus respuestas.</i>
 			</p>
 			<hr />
 			<p>{{ settings.get("STRING_INTRO") }}</p>
