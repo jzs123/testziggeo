@@ -7,7 +7,7 @@ os.environ['COOKIE_SECRET'] = os.environ.get("SECRET_TOKEN", "placeholder")
 os.environ['MONGODB_URL'] = os.environ.get("MONGODB_URI", "mongodb://localhost:27017/apptrack")
 os.environ['DB_NAME'] = urlparse.urlsplit(os.environ['MONGODB_URL']).path.replace("/","")
 os.environ['ZIGGEO_TOKEN'] = urlparse.urlsplit(os.environ.get("ZIGGEO_URL", "https://token:privatekey@srvapi.ziggeo.com")).username
-os.environ['FILE_PICKER_KEY'] = os.environ.get("FILEPICKER_API_KEY", "placeholder")
+os.environ['FILE_PICKER_KEY'] = os.environ.get("AcwxIkLpRz9iQQpQaycAMz", "placeholder")
 os.environ["ADMINS"] = "adminname:adminpassword"
 
 
@@ -17,26 +17,34 @@ os.environ['PATH'] = "/app/bin:/app/vendor/nginx/sbin:/app/vendor/php/bin:/app/v
 os.environ['TZ'] = "US/Eastern"
 os.environ['PROJECT_ROOT'] = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 
-os.environ['SITE_TITLE'] = "Applicant Tracking"
-os.environ['APPLY_TITLE'] = "Apply"   
-os.environ['STRING_BOTTOM'] = "We support workplace diversity and do not discriminate in employment matters on the basis of race, color, religion, gender, national origin, age, military service eligibility, veteran status, sexual orientation, marital status, disability, or any other protected class."
-os.environ['STRING_CONFIRMATION'] = "We will begin reviewing applications shortly, and we will be in touch regarding next steps."
-os.environ["STRING_WELCOME"] = "Thanks for taking the time to apply for our position."
-os.environ["STRING_INTRO"] = "In the first section (below), we're looking to see links that will help us get to know you. This could be your personal blog, Tumblr, Github profile or Twitter account - whatever represents you best. We expect your web presence to represent who you are, not who you think an employer wishes you were, so please don't waste time sanitizing your web presence before sending us there. We get it."
+os.environ['SITE_TITLE'] = "Sitio de Postulacion"
+os.environ['APPLY_TITLE'] = "Postular"   
+os.environ['STRING_BOTTOM'] = "Esta es una prueba de un sistema de postulacion"
+os.environ['STRING_CONFIRMATION'] = "Su solicitud sera revisada pronto, nos pondremos en contacto con usted."
+os.environ["STRING_WELCOME"] = "Gracias por postular a nuestra vacante"
+os.environ["STRING_INTRO"] = "En esta primera seccion debe escribir un pequeño texto "
 
 global_data = {
     "VIDEOS": [{
-        "question": "Why are you interested in the position?",
+        "question": "¿Por que esta interesado en esta Posicion y como puede aportar en la posicion?",
         "limit": 90,
         "required": True
-    }, {
-        "question": "What inspires you the most, and why?",
+    },
+    {
+        "question": "¿Cuales es su principal fortalez y su principal debilidad?",
+        "limit": 50,
+        "required": True
+    },
+        {
+        "question": "¿Cual es su experiencia relevante en el Cargo?",
         "limit": 120,
         "required": True
-    }],
+    }
+    
+    ],
     "FIELDS": [{
-        "label": "Your Name",
-        "name": "name",
+        "label": "Su Nombre",
+        "name": "nombre",
         "type": "text",
         "placeholder": "",
         "required": True
@@ -53,22 +61,16 @@ global_data = {
         "placeholder": "Where are you now?",
         "required": True
     }, {
-        "label": "You, on the Web",
-        "name": "web",
+        "label": "Referencias",
+        "name": "referencias",
         "type": "textarea",
-        "placeholder": "Any public social links that help us get to know you. (Please put each link on a new line.)",
-        "required": True
-    }, {
-        "label": "Projects",
-        "name": "projects",
-        "type": "textarea",
-        "placeholder": "Any links to projects you've built or worked on. (Please put each link on a new line.)",
+        "placeholder": "Por favor ingrese referencias con nombre, cargo y empresa , telefono y/o correo de la referencia",
         "required": False
     }, {
         "label": "CV",
         "name": "cv",
         "type": "file",
-        "placeholder": "Your CV (PDF, DOC, TXT)",
+        "placeholder": "Su CV (PDF, DOC, TXT)",
         "required": False
     }]
 }
