@@ -26,17 +26,17 @@ os.environ["STRING_INTRO"] = "En esta primera seccion debe escribir referencias"
 
 global_data = {
     "VIDEOS": [{
-        "question": "¿Por que esta interesado en esta Posicion y como puede aportar en la posicion?",
+        "question": "Por que esta interesado en esta Posicion y como puede aportar en la posicion?",
         "limit": 90,
         "required": True
     },
     {
-        "question": "¿Cuales es su principal fortalez y su principal debilidad?",
+        "question": "Cuales es su principal fortalez y su principal debilidad?",
         "limit": 50,
         "required": True
     },
         {
-        "question": "¿Cual es su experiencia relevante en el Cargo?",
+        "question": "Cual es su experiencia relevante en el Cargo?",
         "limit": 120,
         "required": True
     }
@@ -58,7 +58,7 @@ global_data = {
         "label": "Ubicacion",
         "name": "Ubicacion",
         "type": "text",
-        "placeholder": "¿Cual es su residencia actual?",
+        "placeholder": "Cual es su residencia actual?",
         "required": True
     }, {
         "label": "Referencias",
