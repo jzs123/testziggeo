@@ -22,7 +22,7 @@ os.environ['APPLY_TITLE'] = "Postular"
 os.environ['STRING_BOTTOM'] = "Esta es una prueba de un sistema de postulacion"
 os.environ['STRING_CONFIRMATION'] = "Su solicitud sera revisada pronto, nos pondremos en contacto con usted."
 os.environ["STRING_WELCOME"] = "Gracias por postular a nuestra vacante"
-os.environ["STRING_INTRO"] = "En esta primera seccion debe escribir un pequeño texto "
+os.environ["STRING_INTRO"] = "En esta primera seccion debe escribir referencias"
 
 global_data = {
     "VIDEOS": [{
@@ -55,10 +55,10 @@ global_data = {
         "placeholder": "",
         "required": True
     }, {
-        "label": "Location",
-        "name": "location",
+        "label": "Ubicacion",
+        "name": "Ubicacion",
         "type": "text",
-        "placeholder": "Where are you now?",
+        "placeholder": "¿Cual es su residencia actual?",
         "required": True
     }, {
         "label": "Referencias",
